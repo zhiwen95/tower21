@@ -1,11 +1,11 @@
 services:
   nginx-proxy-manager:
-      image: 'jc21/nginx-proxy-manager:${NGINX-PROXY-MANAGER_IMAGE_VERSION:-latest}'
+      image: 'jc21/nginx-proxy-manager:${NGINX_PROXY_MANAGER_IMAGE_VERSION:-latest}'
       restart: unless-stopped
       ports:
         - '80:80'
         - '81:81'
         - '443:443'
       volumes:
-        - ${NGINX-PROXY-MANAGER_VOLUME:-.}/data:/data
-        - ${NGINX-PROXY-MANAGER_VOLUME:-.}/letsencrypt:/etc/letsencrypt
+        - ${NGINX_PROXY_MANAGER_VOLUME:-.}/data:/data
+        - ${NGINX_PROXY_MANAGER_VOLUME:-.}/letsencrypt:/etc/letsencrypt
