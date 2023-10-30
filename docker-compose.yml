@@ -1,2 +1,2 @@
 include:
-  - path: 'docker-compose.nginx-proxy-manager.yml'
+  - path: 'nginx-proxy-manager/docker-compose.nginx-proxy-manager.yml'
