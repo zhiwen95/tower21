@@ -1,0 +1,13 @@
+services:
+  sonarr-anime:
+    image: 'linuxserver/sonarr:${SONARR_IMAGE_VERSION:-latest}'
+    restart: unless-stopped
+    environment:
+      - 'TZ=${TZ:-Asia/Shanghai}'
+      - 'PUID=${PUID:-1000}'
+      - 'PGID=${PGID:-100}'
+    ports:
+      - '9117:9117'
+    volumes:
+      - ${SONARR_ANIME_VOLUME:-.}/conf:/config
+      - ${MEDIA_VOLUME:-/mnt/user/media}:/mnt/user/media
