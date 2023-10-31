@@ -3,8 +3,9 @@ services:
       image: 'jc21/nginx-proxy-manager:${NGINX_PROXY_MANAGER_IMAGE_VERSION:-latest}'
       restart: unless-stopped
       environment:
-        - 'PUID=1000'
-        - 'PGID=100'
+        - 'TZ=${TZ:-Asia/Shanghai}'
+        - 'PUID=${PUID:-1000}'
+        - 'PGID=${PGID:-100}'
       ports:
         - '80:80'
         - '81:81'
