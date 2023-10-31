@@ -1,0 +1,13 @@
+services:
+  flaresolverr:
+    image: 'flaresolverr/flaresolverr:${FLARESOLVERR_IMAGE_VERSION:-latest}'
+    restart: unless-stopped
+    environment:
+      - 'TZ=${TZ:-Asia/Shanghai}'
+      - 'PUID=${PUID:-1000}'
+      - 'PGID=${PGID:-100}'
+      - 'LOG_LEVEL=${FLARESOLVERR_LOG_LEVEL:-info}'
+      - 'LOG_HTML=${FLARESOLVERR_LOG_HTML:-false}'
+      - 'CAPTCHA_SOLVER=hcaptcha-solver'
+    ports:
+      - '8191:8191'
