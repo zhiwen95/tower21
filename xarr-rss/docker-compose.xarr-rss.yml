@@ -10,3 +10,7 @@ services:
       - '8086:8086'
     volumes:
       - ${XARR_RSS_VOLUME:-.}/conf:/app/conf
+    deploy:
+      resources:
+        limits:
+          cpus: '1.00'
