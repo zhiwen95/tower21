@@ -12,3 +12,9 @@ services:
       - ${EMBY_VOLUME:-.}/conf:/config
       - ${EMBY_VOLUME:-.}/plugins:/app/emby/plugins
       - ${MEDIA_VOLUME:-/mnt/user/media}:/mnt/user/media
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            capabilities: [gpu]
