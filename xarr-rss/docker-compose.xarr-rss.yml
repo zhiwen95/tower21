@@ -1,0 +1,11 @@
+services:
+  xarr-rss:
+    image: 'xiaoyi510/xarr-rss:${XARR_RSS_IMAGE_VERSION:-latest}'
+    restart: unless-stopped
+    user: '${PUID:-1000}:${PGID:-100}'
+    environment:
+      - 'TZ=${TZ:-Asia/Shanghai}'
+    ports:
+      - '8086:8086'
+    volumes:
+      - ${XARR_RSS_VOLUME:-.}/conf:/app/conf
