@@ -2,7 +2,6 @@ services:
   subconverter:
     image: 'tindy2013/subconverter:${SUBCONVERTER_IMAGE_VERSION:-latest}'
     restart: unless-stopped
-    user: '${PUID:-1000}:${PGID:-100}'
     command: sh /base/scripts/run.sh
     environment:
       - 'TZ=${TZ:-Asia/Shanghai}'
@@ -17,7 +16,6 @@ services:
   subconverter-resources:
     image: 'nginx:${SUBCONVERTER_IMAGE_VERSION:-latest}'
     restart: unless-stopped
-    user: '${PUID:-1000}:${PGID:-100}'
     environment:
       - 'TZ=${TZ:-Asia/Shanghai}'
     ports:
