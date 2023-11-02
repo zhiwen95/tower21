@@ -1,0 +1,27 @@
+services:
+  subconverter:
+    image: 'tindy2013/subconverter:${SUBCONVERTER_IMAGE_VERSION:-latest}'
+    restart: unless-stopped
+    user: '${PUID:-1000}:${PGID:-100}'
+    command: sh /base/scripts/run.sh
+    environment:
+      - 'TZ=${TZ:-Asia/Shanghai}'
+    ports:
+      - '25500:25500'
+    volumes:
+      - '${SUBCONVERTER_PATH:-.}/scripts:/base/scripts:ro'
+      - '${SUBCONVERTER_PATH:-.}/profiles:/base/profiles:ro'
+      - '${SUBCONVERTER_PATH:-.}/resources/ACL4SSR/Clash/config:/base/config:ro'
+      - '${SUBCONVERTER_PATH:-.}/resources/ACL4SSR/Clash:/base/rules/ACL4SSR/Clash:ro'
+      - '${SUBCONVERTER_PATH:-.}/resources/Loyalsoldier:/base/rules/Loyalsoldier:ro'
+  subconverter-resources:
+    image: 'nginx:${SUBCONVERTER_IMAGE_VERSION:-latest}'
+    restart: unless-stopped
+    user: '${PUID:-1000}:${PGID:-100}'
+    environment:
+      - 'TZ=${TZ:-Asia/Shanghai}'
+    ports:
+      - '25501:80'
+    volumes:
+      - '${SUBCONVERTER_PATH:-.}/resources:/usr/share/nginx/html:ro'
+
