@@ -7,3 +7,4 @@ include:
   - path: 'xarr-rss/docker-compose.xarr-rss.yml'
   - path: 'flexget/docker-compose.flexget.yml'
   - path: 'subconverter/docker-compose.subconverter.yml'
+  - path: 'netdata/docker-compose.netdata.yml'
