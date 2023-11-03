@@ -1,6 +1,6 @@
 include:
   - path: 'nginx-proxy-manager/docker-compose.nginx-proxy-manager.yml'
-  - path: 'emby/docker-compose.emby.yml'
+  # - path: 'emby/docker-compose.emby.yml'
   - path: 'flaresolverr/docker-compose.flaresolverr.yml'
   - path: 'jackett/docker-compose.jackett.yml'
   - path: 'sonarr-anime/docker-compose.sonarr-anime.yml'
