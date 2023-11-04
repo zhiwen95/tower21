@@ -13,4 +13,4 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '4.00'
+          cpus: '6.00'
