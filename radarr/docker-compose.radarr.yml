@@ -1,0 +1,13 @@
+services:
+  radarr:
+    image: 'linuxserver/radarr:${RADARR_IMAGE_VERSION:-latest}'
+    restart: unless-stopped
+    environment:
+      - 'TZ=${TZ:-Asia/Shanghai}'
+      - 'PUID=${PUID:-1000}'
+      - 'PGID=${PGID:-100}'
+    ports:
+      - '7878:7878'
+    volumes:
+      - ${RADARR_VOLUME:-.}/conf:/config
+      - ${MEDIA_VOLUME:-/mnt/user/media}:/mnt/user/media
