@@ -1,5 +1,5 @@
 services:
-  sonarr:
+  sonarr-4k:
     image: 'linuxserver/sonarr:${SONARR_IMAGE_VERSION:-latest}'
     restart: unless-stopped
     environment:
