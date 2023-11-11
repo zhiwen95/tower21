@@ -7,6 +7,5 @@ include:
   - path: 'xarr-rss/docker-compose.xarr-rss.yml'
   - path: 'subconverter/docker-compose.subconverter.yml'
   - path: 'netdata/docker-compose.netdata.yml'
-  - path: 'prowlarr/docker-compose.prowlarr.yml'
   - path: 'radarr/docker-compose.radarr.yml'
   - path: 'overseerr/docker-compose.overseerr.yml'
