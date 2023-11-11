@@ -1,6 +1,8 @@
 include:
   - path: 'flaresolverr/docker-compose.flaresolverr.yml'
   - path: 'jackett/docker-compose.jackett.yml'
+  - path: 'sonarr/docker-compose.sonarr.yml'
+  - path: 'sonarr-4k/docker-compose.sonarr-4k.yml'
   - path: 'sonarr-anime/docker-compose.sonarr-anime.yml'
   - path: 'xarr-rss/docker-compose.xarr-rss.yml'
   - path: 'subconverter/docker-compose.subconverter.yml'
