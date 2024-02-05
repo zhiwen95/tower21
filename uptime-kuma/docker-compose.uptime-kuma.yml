@@ -1,6 +1,6 @@
 services:
   uptime-kuma:
-    image: 'louislam/uptime-kuma:${UPTIME_KUMA_VERSION:-1}'
+    image: 'elestio/uptime-kuma:${UPTIME_KUMA_VERSION:-1}'
     restart: unless-stopped
     environment:
       - 'TZ=${TZ:-Asia/Shanghai}'
