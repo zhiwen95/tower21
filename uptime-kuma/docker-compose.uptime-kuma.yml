@@ -7,4 +7,4 @@ services:
     ports:
       - '3001:3001'
     volumes:
-      - ${UPTIME_KUMA_VOLUME:-.}/conf:/app/data
+      - ${UPTIME_KUMA_VOLUME:-.}/data:/app/data
