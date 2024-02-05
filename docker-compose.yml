@@ -9,3 +9,4 @@ include:
   - path: 'netdata/docker-compose.netdata.yml'
   - path: 'radarr/docker-compose.radarr.yml'
   - path: 'jellyseerr/docker-compose.jellyseerr.yml'
+  - path: 'uptime-kuma/docker-compose.uptime-kuma.yml'
