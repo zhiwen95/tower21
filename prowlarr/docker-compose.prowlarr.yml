@@ -1,0 +1,12 @@
+services:
+  prowlarr:
+    image: 'linuxserver/prowlarr:${PROWLARR_IMAGE_VERSION:-latest}'
+    restart: unless-stopped
+    environment:
+      - 'TZ=${TZ:-Asia/Shanghai}'
+      - 'PUID=${PUID:-1000}'
+      - 'PGID=${PGID:-100}'
+    ports:
+      - '9696:9696'
+    volumes:
+      - ${PROWLARR_ANIME_VOLUME:-.}/conf:/config
