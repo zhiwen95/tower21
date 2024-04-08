@@ -9,4 +9,4 @@ include:
   - path: 'netdata/docker-compose.netdata.yml'
   - path: 'radarr/docker-compose.radarr.yml'
   - path: 'jellyseerr/docker-compose.jellyseerr.yml'
-  - path: 'prowlarr/prowlarr/docker-compose.prowlarr.yml'
+  - path: 'prowlarr/docker-compose.prowlarr.yml'
