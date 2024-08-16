@@ -9,3 +9,5 @@ include:
   - path: 'radarr/docker-compose.radarr.yml'
   - path: 'jellyseerr/docker-compose.jellyseerr.yml'
   - path: 'prowlarr/docker-compose.prowlarr.yml'
+  - path: 'node-exporter/docker-compose.node-exporter.yml'
+  - path: 'chatgpt-next-web/docker-compose.chatgpt-next-web.yml'
