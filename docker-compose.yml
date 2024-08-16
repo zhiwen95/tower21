@@ -6,7 +6,6 @@ include:
   - path: 'sonarr-anime/docker-compose.sonarr-anime.yml'
   - path: 'xarr-rss/docker-compose.xarr-rss.yml'
   - path: 'subconverter/docker-compose.subconverter.yml'
-  - path: 'netdata/docker-compose.netdata.yml'
   - path: 'radarr/docker-compose.radarr.yml'
   - path: 'jellyseerr/docker-compose.jellyseerr.yml'
   - path: 'prowlarr/docker-compose.prowlarr.yml'
