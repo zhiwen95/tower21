@@ -7,4 +7,6 @@ services:
       - 'BASE_URL=${CHATGPT_NEXT_WEB_BASE_URL:-https://api.openai-proxy.org}'
       - 'CODE=${CHATGPT_NEXT_WEB_CODE}'
       - 'OPENAI_API_KEY=${CHATGPT_NEXT_WEB_OPENAI_API_KEY}'
+    ports:
+      - '${CHATGPT_NEXT_WEB_PORT:-3000}:3000'
     cpuset: ${CPUSET}
