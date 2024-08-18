@@ -11,3 +11,4 @@ include:
   - path: 'prowlarr/docker-compose.prowlarr.yml'
   - path: 'node-exporter/docker-compose.node-exporter.yml'
   - path: 'chatgpt-next-web/docker-compose.chatgpt-next-web.yml'
+  - path: 'gh-proxy/docker-compose.gh-proxy.yml'

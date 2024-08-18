@@ -9,4 +9,3 @@ services:
       - 'OPENAI_API_KEY=${CHATGPT_NEXT_WEB_OPENAI_API_KEY}'
     ports:
       - '${CHATGPT_NEXT_WEB_PORT:-3000}:3000'
-    cpuset: ${CPUSET}

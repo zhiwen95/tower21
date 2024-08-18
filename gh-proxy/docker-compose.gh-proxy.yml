@@ -1,0 +1,8 @@
+services:
+  gh-proxy:
+    image: hunsh/gh-proxy-py:latest
+    restart: always
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - "8085:80"
