@@ -1,7 +1,7 @@
 services:
   subconverter:
     image: 'tindy2013/subconverter:${SUBCONVERTER_IMAGE_VERSION:-latest}'
-    restart: unless-stopped
+    restart: always
     command: sh /base/scripts/run.sh
     environment:
       - 'TZ=${TZ:-Asia/Shanghai}'
@@ -15,7 +15,7 @@ services:
       - '${SUBCONVERTER_PATH:-.}/resources/Loyalsoldier:/base/rules/Loyalsoldier:ro'
   subconverter-resources:
     image: 'nginx:${SUBCONVERTER_IMAGE_VERSION:-latest}'
-    restart: unless-stopped
+    restart: always
     environment:
       - 'TZ=${TZ:-Asia/Shanghai}'
     ports:

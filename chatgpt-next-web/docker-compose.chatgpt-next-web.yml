@@ -1,7 +1,7 @@
 services:
   chatgpt-next-web:
     image: yidadaa/chatgpt-next-web:${CHATGPT_NEXT_WEB_IMAGE_VERSION:-latest}
-    restart: unless-stopped
+    restart: always
     environment:
       - 'TZ=${TZ:-Asia/Shanghai}'
       - 'BASE_URL=${CHATGPT_NEXT_WEB_BASE_URL:-https://api.openai-proxy.org}'

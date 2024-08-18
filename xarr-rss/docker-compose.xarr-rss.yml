@@ -1,7 +1,7 @@
 services:
   xarr-rss:
     image: 'xiaoyi510/xarr-rss:${XARR_RSS_IMAGE_VERSION:-latest}'
-    restart: unless-stopped
+    restart: always
     environment:
       - 'TZ=${TZ:-Asia/Shanghai}'
       - 'PUID=${PUID:-1000}'

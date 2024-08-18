@@ -1,7 +1,7 @@
 services:
   jellyseerr:
     image: 'fallenbagel/jellyseerr:${JELLYSEERR_IMAGE_VERSION:-latest}'
-    restart: unless-stopped
+    restart: always
     user: ${PUID:-1000}:${PGID:-100}
     environment:
       - 'TZ=${TZ:-Asia/Shanghai}'

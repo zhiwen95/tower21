@@ -1,7 +1,7 @@
 services:
   sonarr-4k:
     image: 'linuxserver/sonarr:${SONARR_IMAGE_VERSION:-latest}'
-    restart: unless-stopped
+    restart: always
     environment:
       - 'TZ=${TZ:-Asia/Shanghai}'
       - 'PUID=${PUID:-1000}'
